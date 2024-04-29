@@ -1,7 +1,8 @@
 <?php
-var_dump($_POST);
+//var_dump($_POST);
 $textarea = $_POST['textarea'];
 $badword = $_POST['badword'];
+$modifiedtext = str_replace("$badword","***", "$textarea");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +24,9 @@ $badword = $_POST['badword'];
         </div>
         <div>
             <h3>Paragrafo censurato</h3>
+            <p>
+                <?php echo $modifiedtext ?>
+            </p>
         </div>
     </div>
 </body>
