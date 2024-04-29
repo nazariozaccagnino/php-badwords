@@ -19,9 +19,15 @@
     <main class="container">
         <h3>Inserire testo</h3>
         <div class="mb-3">
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <form action="result.php" method="post">
+                <textarea class="form-control" rows="3" name="textarea"></textarea>
         </div>
-
+        <h3>Inserire parola da censurare</h3>
+        <div>
+            <input type="text" class="form-control mb-3" name="badword">
+            <button type="submit" class="btn btn-success">Invia</button>
+        </div>
+        </form>
     </main>
 </body>
 
